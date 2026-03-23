@@ -1,0 +1,42 @@
+<!-- APP SHELL -->
+<nav class="nav">
+  <span class="nav-brand">✈ ISG <span>Travel</span></span>
+  <a routerLink="/"             routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+  <a routerLink="/booking"      routerLinkActive="active">Booking</a>
+  <a routerLink="/itinerary"    routerLinkActive="active">Itinerary</a>
+  <a routerLink="/payment"      routerLinkActive="active">Payment</a>
+  <a routerLink="/confirmation" routerLinkActive="active">Confirmation</a>
+</nav>
+
+<router-outlet></router-outlet>
+
+<!-- ── Analytics Debug Panel ──────────────────────────────── -->
+<div class="page" style="margin-top:2rem">
+
+  <!-- sessionStorage values -->
+  <div class="card">
+    <div class="card-title">📦 SessionStorage → Analytics Fields</div>
+    <div class="ss-grid">
+      <div class="ss-item" *ngFor="let item of sessionData">
+        <div class="ss-key">{{ item.key }}</div>
+        <div class="ss-val">{{ item.value }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Live event log -->
+  <div class="card">
+    <div class="card-title">📡 Live Analytics Event Log</div>
+    <div class="event-log">
+      <div class="log-entry" *ngFor="let entry of eventLog">
+        <span class="log-time">{{ entry.time }}</span>
+        <span class="log-type {{ entry.type }}">{{ entry.type }}</span>
+        <span class="log-detail">{{ entry.detail }}</span>
+      </div>
+      <div class="log-entry" *ngIf="eventLog.length === 0">
+        <span style="color:#718096">Waiting for events...</span>
+      </div>
+    </div>
+  </div>
+
+</div>

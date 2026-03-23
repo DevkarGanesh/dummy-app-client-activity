@@ -1,0 +1,39 @@
+<div class="page">
+  <div class="steps">
+    <div class="step done">1 · Home</div>
+    <div class="step done">2 · Booking</div>
+    <div class="step done">3 · Itinerary</div>
+    <div class="step active">4 · Payment</div>
+    <div class="step">5 · Confirmation</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">💳 Payment Summary — BK-2026-00471</div>
+    <table class="table">
+      <thead><tr><th>Description</th><th>Amount</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Flights (2 × Return LHR–DPS)</td><td>£2,100.00</td><td><span class="badge badge-green">Paid</span></td></tr>
+        <tr><td>Hotel — 7 Nights Seminyak</td><td>£1,680.00</td><td><span class="badge badge-green">Paid</span></td></tr>
+        <tr><td>Tours & Activities</td><td>£470.00</td><td><span class="badge badge-yellow">Balance Due</span></td></tr>
+        <tr><td>Travel Insurance</td><td>£180.00</td><td><span class="badge badge-yellow">Balance Due</span></td></tr>
+        <tr><td>Airport Transfers</td><td>£120.00</td><td><span class="badge badge-yellow">Balance Due</span></td></tr>
+        <tr><td><strong>Total</strong></td><td><strong>£4,850.00</strong></td><td></td></tr>
+        <tr><td>Deposit Paid</td><td>- £970.00</td><td><span class="badge badge-green">Received</span></td></tr>
+        <tr><td><strong>Balance Due</strong></td><td><strong>£3,880.00</strong></td><td><span class="badge badge-yellow">Due 15 Jul 2026</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🏦 Pay Balance</div>
+    <p class="text-muted">Balance of <strong>£3,880.00</strong> is due by <strong>15 July 2026</strong>.</p>
+    <div class="mt-2 row">
+      <a routerLink="/confirmation" class="btn btn-success">Pay £3,880.00 →</a>
+      <a href="https://www.barclays.co.uk/online-banking" target="_blank" class="btn btn-outline">Barclays Online Banking ↗</a>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:.5rem">
+    <a routerLink="/itinerary" class="btn btn-outline">← Itinerary</a>
+  </div>
+</div>
