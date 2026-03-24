@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>ISG Travel — Booking Portal</title>
@@ -16,34 +17,36 @@
     // ── 1. Seed dummy sessionStorage (mimics what real apps store) ────────────
     //    Read automatically by the tracker via SESSION_STORAGE_KEYS.
     //    In a real app these are set on login / booking load.
-    sessionStorage.setItem('account_name',   'Acme Travel Ltd');
-    sessionStorage.setItem('account_code',   'ACME-001');
-    sessionStorage.setItem('booking_no',     'BK-2026-00471');
-    sessionStorage.setItem('quote_no',       'QT-2026-00198');
-    sessionStorage.setItem('itinerary_no',   'ITN-456');
+    sessionStorage.setItem('account_name', 'Acme Travel Ltd');
+    sessionStorage.setItem('account_code', 'ACME-001');
+    sessionStorage.setItem('booking_no', 'BK-2026-00471');
+    sessionStorage.setItem('quote_no', 'QT-2026-00198');
+    sessionStorage.setItem('itinerary_no', 'ITN-456');
     sessionStorage.setItem('itinerary_name', 'Bali - 7 Night Adventure Package');
 
     // ── 2. Analytics tracker config ───────────────────────────────────────────
     window.ANALYTICS_CONFIG = {
-      TRACKING_SERVER: 'http://localhost:3001',
+      TRACKING_SERVER: 'https://dhruv.isgesolutions.com/dhruvanalytics',
       SITE_ID: 'isg-booking-demo',
 
       // Maps analytics field name → sessionStorage key used by THIS app
       SESSION_STORAGE_KEYS: {
-        account_name:   'account_name',
-        account_code:   'account_code',
-        booking_no:     'booking_no',
-        quote_no:       'quote_no',
-        itinerary_no:   'itinerary_no',
+        account_name: 'account_name',
+        account_code: 'account_code',
+        booking_no: 'booking_no',
+        quote_no: 'quote_no',
+        itinerary_no: 'itinerary_no',
         itinerary_name: 'itinerary_name'
       }
     };
   </script>
 </head>
+
 <body>
   <app-root></app-root>
 
   <!-- Analytics Tracker — must come AFTER window.ANALYTICS_CONFIG -->
-  <script src="http://localhost:3001/tracker.js"></script>
+  <script src="https://dhruv.isgesolutions.com/dhruvanalytics/tracker.js"></script>
 </body>
+
 </html>
